@@ -2,72 +2,130 @@
 <html lang="en-us">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Portfolio</title>
-    <link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
-    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <!-- style CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css" media="screen">
+    <title>Bootstrap Portfolio</title>
 </head>
 
 <body>
-
-    <header class="main-header">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-light">
+        <!-- fixed header
+                <nav class="navbar navbar-expand-lg navbar-dark bg-light fixed-top"></nav>
+                -->
         <div class="container">
-            <a href="index.html" class="name">James Kim</a>
-            <nav>
-                <a href="index.html">About</a>
-                <a href="portfolio.html">Portfolio</a>
-                <a href="contact.html">Contact</a>
-            </nav>
+            <a class="navbar-brand" href="./index.html">James Kim</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link text-secondary" href="./index.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-secondary" href="./contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-secondary" href="./portfolio.html">Portfolio</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </header>
+    </nav>
 
-    <div class="container2">
-        <section class="main-section">
-            <h1>Portfolio</h1>
-
-            <div class="project-container">
-                <div class="project">
-                    <img src="http://lorempixel.com/200/200/sports" alt="sports">
-                    <h3>Sportz</h3>
+    <div class="container" id="main-container">
+        <div class="row">
+            <div class="col-md-8" id="main-content">
+                <div class="page-header">
+                    <h1>Portfolio</h1>
                 </div>
-
-                <div class="project">
-                    <img src="http://lorempixel.com/200/200/food" alt="food">
-                    <h3>Fud</h3>
+                <br>
+                <!-- where the portfolio content goes -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card-deck">
+                            <div class="card">
+                                <img class="card-img-top" src="http://lorempixel.com/200/200/sports" alt="sports">
+                                <div class="card-body">
+                                <h5 class="card-title">Sportz</h5>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img class="card-img-top" src="http://lorempixel.com/200/200/food" alt="food">
+                                <div class="card-body">
+                                <h5 class="card-title">Fud</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="project">
-                    <img src="http://lorempixel.com/200/200/nightlife" alt="nighlift">
-                    <h3>Nightlyfe</h3>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card-deck">
+                            <div class="card">
+                                <img class="card-img-top" src="http://lorempixel.com/200/200/nightlife" alt="nightlife">
+                                <div class="card-body">
+                                <h5 class="card-title">Nightlyfe</h5>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img class="card-img-top" src="http://lorempixel.com/200/200/cats" alt="cats">
+                                <div class="card-body">
+                                <h5 class="card-title">Katz</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="project">
-                    <img src="http://lorempixel.com/200/200/cats" alt="cats">
-                    <h3>Katz</h3>
-                </div>
-            
-                <div class="project">
-                    <img src="http://lorempixel.com/200/200/nature" alt="nature">
-                    <h3>Neighture</h3>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card">
+                            <img class="card-img-top" src="http://lorempixel.com/200/200/nature" alt="nature">
+                            <div class="card-body">
+                            <h5 class="card-title">Neighture</h5>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </section>
-
-        <section class="sidebar">
-            <div class="media">
-                <h2>Connect with Me</h2>
-                <a href="#"><img src="./assets/images/GitHub-Mark-64px.png" class="social" alt="GitHub"/></a> 
-                <a href="#"><img src="./assets/images/In-2C-66px-R.png" class="social" alt="LinkedIn" /></a>
-                <a href="#"><img src="./assets/images/if_twitter_252077.png" class="social" alt="Twitter" /></a>
+            <div class="col-md-4">
+            <!-- where the sidebar content goes -->
+                <div class="card bg-light mb-3" style="max-width: 18rem;">
+                    <div class="card-header">Connect With Me</div>
+                    <div class="card-body text-center" id="connect-card">
+                        <a href="https://github.com/jskim25">
+                            <img src="./assets/images/GitHub-Mark-64px.png" class="social" alt="GitHub" />
+                        </a>
+                        <a href="https://www.linkedin.com/in/jameskim09/">
+                            <img src="./assets/images/In-2C-66px-R.png" class="social" alt="LinkedIn" />
+                        </a>
+                        <a href="https://twitter.com/jomskim">
+                            <img src="./assets/images/if_twitter_252077.png" class="social" alt="Twitter" />
+                        </a>
+                    </div>
+                </div>
             </div>
-        </section>
+        </div>
     </div>
 
+    <!-- footer -->
     <footer>
-        <div class="container3">
-            Copyright &copy; 2018 James Kim
-        </div>
+        &copy; Copyright 2018 James Kim
     </footer>
 
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
